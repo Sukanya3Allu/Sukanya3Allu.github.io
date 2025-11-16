@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sukanya Allu - AI/ML & Full-Stack Engineer</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Segoe UI', sans-serif; line-height:1.6; color:#333; background:#f9f9f9; }
+    .hero { text-align:center; padding:4rem 1rem; background:linear-gradient(135deg, #667eea, #764ba2); color:white; }
+    .hero h1 { font-size:2.5rem; }
+    .highlight { color:#ffd700; }
+    .btn { display:inline-block; margin-top:1rem; padding:0.8rem 1.5rem; background:#ffd700; color:#333; text-decoration:none; border-radius:5px; font-weight:bold; }
+    #projects, #services, #contact { padding:3rem 1rem; max-width:1000px; margin:auto; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:1.5rem; }
+    .card { background:white; border-radius:8px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.1); }
+    .card img { width:100%; height:180px; object-fit:cover; }
+    .card h3 { padding:1rem 1rem 0.5rem; }
+    .card p { padding:0 1rem 1rem; font-size:0.9rem; }
+    form { display:grid; gap:1rem; max-width:500px; margin:auto; }
+    input, textarea, button { padding:0.8rem; border:1px solid #ddd; border-radius:5px; font-size:1rem; }
+    button { background:#667eea; color:white; border:none; cursor:pointer; }
+    button:hover { background:#5a6fd8; }
+    footer { text-align:center; padding:2rem; background:#333; color:white; font-size:0.9rem; }
+    footer a { color:#ffd700; }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>Hi, I'm <span class="highlight">Sukanya Allu</span></h1>
+    <p>AI/ML Engineer | Full-Stack Developer | Chatbots • Predictive Models • Web Apps</p>
+    <a href="#contact" class="btn">Hire Me</a>
+  </header>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/600x400/4a90e2/ffffff?text=Chatbot" alt="Chatbot">
+        <h3>RAG Chatbot with Your Docs</h3>
+        <p>LangChain + OpenAI + Streamlit</p>
+        <a href="#">Live Demo</a> | <a href="#">GitHub</a>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/600x400/50c878/ffffff?text=Dashboard" alt="Dashboard">
+        <h3>Sales Forecast Dashboard</h3>
+        <p>Pandas + Prophet + Plotly Dash</p>
+        <a href="#">Live Demo</a> | <a href="#">GitHub</a>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/600x400/ff6b6b/ffffff?text=Web+App" alt="Web App">
+        <h3>E-commerce with AI Recommendations</h3>
+        <p>Next.js + Node + TensorFlow</p>
+        <a href="#">Live Demo</a> | <a href="#">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h2>Services (Gigs)</h2>
+    <ul style="max-width:600px; margin:auto; line-height:2;">
+      <li>Custom ChatGPT Clone with Your Data – <strong>$150</strong></li>
+      <li>Predictive Analytics Dashboard – <strong>$250</strong></li>
+      <li>Full-Stack Web App + ML Feature – <strong>$500</strong></li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Let’s Work Together</h2>
+    <form action="https://formspree.io/f/placeholder" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Tell me about your project..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Sukanya Allu | <a href="https://github.com/Sukanya3Allu">GitHub</a> | <a href="#">LinkedIn</a></p>
+  </footer>
+
+</body>
+</html>
