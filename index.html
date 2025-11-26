@@ -23,41 +23,111 @@
     button:hover { background:#5a6fd8; }
     footer { text-align:center; padding:2rem; background:#333; color:white; font-size:0.9rem; }
     footer a { color:#ffd700; }
+
+    /* === HERO STYLING === */
+.hero { 
+  min-height: 100vh; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  text-align: center; 
+  padding: 2rem;
+  background: linear-gradient(rgba(10,10,30,0.94), rgba(10,10,30,0.9)),
+              url('https://images.unsplash.com/photo-1639322471722-3d1c7a13f0ec?w=1920&q=80') center/cover;
+  color: white;
+}
+.profile-pic { 
+  width: 180px; 
+  height: 180px; 
+  border-radius: 50%; 
+  border: 6px solid #6366f1; 
+  margin-bottom: 1.5rem; 
+  object-fit: cover;
+}
+.hero-title { font-size: 3.5rem; margin: 0; }
+.hero-subtitle { font-size: 1.4rem; opacity: 0.95; margin: 1rem 0; }
+.hero-tagline { font-size: 1.7rem; margin: 1.5rem 0 2.5rem; }
+.hero-buttons .btn { margin: 0.5rem; padding: 1rem 2rem; font-size: 1.1rem; }
+.btn-primary { background: #6366f1; color: white; border: none; }
+.btn-secondary { background: transparent; border: 2px solid #6366f1; color: white; }
+
+/* === CONTACT STYLING === */
+.contact-options { 
+  display: flex; 
+  gap: 3rem; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  margin-top: 2rem;
+}
+.contact-form, .contact-calendly { flex: 1; min-width: 300px;; }
+.contact-calendly { 
+  text-align: center; 
+  padding: 2rem; 
+  background: rgba(255,255,255,0.05); 
+  border-radius: 12px; 
+  border: 1px solid rgba(255,255,255,0.1);
+}
+@media (max-width: 768px) { .contact-options { flex-direction: column; } }
   </style>
+  
 </head>
 <body>
-
-  <!-- HERO -->
-  <header class="hero">
-    <h1>Hi, I'm <span class="highlight">Sukanya Allu</span></h1>
-    <p>AI/ML Engineer | Full-Stack Developer | Chatbots • Predictive Models • Web Apps</p>
-    <a href="#contact" class="btn">Hire Me</a>
-  </header>
-
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
+    
+    <!-- Your photo will go here in 5 mins -->
+    <img src="" alt="Sukanya Allu - AI/ML & IoT Engineer" class="profile-pic" id="profilePic">
+    
+    <h1 class="hero-title">
+      AI/ML Engineer | Computer Vision | Full Stack & IoT Specialist
+    </h1>
+    
+    <h2 class="hero-subtitle">
+      YOLO · OpenCV · TensorFlow · PyTorch · NLP · Scikit-learn<br>
+      React · FastAPI · ESP32 · Raspberry Pi · AWS Deployments
+    </h2>
+    
+    <p class="hero-tagline">
+      Turning your data into revenue with AI-powered web + IoT apps
+    </p>
+    
+    <div class="hero-buttons">
+      <a href="#projects" class="btn btn-primary">View My Work</a>
+      <a href="https://calendly.com/your-calendly-username" target="_blank" class="btn btn-secondary">
+        Book a Quick Call (Reply in 2–3 hrs)
+      </a>
+    </div>
+  </div>
+</header>
+  
   <!-- PROJECTS -->
   <section id="projects">
-    <h2>Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://via.placeholder.com/600x400/4a90e2/ffffff?text=Chatbot" alt="Chatbot">
-        <h3>RAG Chatbot with Your Docs</h3>
-        <p>LangChain + OpenAI + Streamlit</p>
-        <a href="#">Live Demo</a> | <a href="#">GitHub</a>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/600x400/50c878/ffffff?text=Dashboard" alt="Dashboard">
-        <h3>Sales Forecast Dashboard</h3>
-        <p>Pandas + Prophet + Plotly Dash</p>
-        <a href="#">Live Demo</a> | <a href="#">GitHub</a>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/600x400/ff6b6b/ffffff?text=Web+App" alt="Web App">
-        <h3>E-commerce with AI Recommendations</h3>
-        <p>Next.js + Node + TensorFlow</p>
-        <a href="#">Live Demo</a> | <a href="#">GitHub</a>
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://via.placeholder.com/600x400/4a90e2/ffffff?text=Chatbot" alt="Chatbot">
+          <h3>RAG Chatbot with Your Docs</h3>
+          <p>LangChain + OpenAI + Streamlit</p>
+          <a href="#">Live Demo</a> | <a href="#">GitHub</a>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/600x400/50c878/ffffff?text=Dashboard" alt="Dashboard">
+          <h3>Sales Forecast Dashboard</h3>
+          <p>Pandas + Prophet + Plotly Dash</p>
+          <a href="#">Live Demo</a> | <a href="#">GitHub</a>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/600x400/ff6b6b/ffffff?text=Web+App" alt="Web App">
+          <h3>E-commerce with AI Recommendations</h3>
+          <p>Next.js + Node + TensorFlow</p>
+          <a href="#">Live Demo</a> | <a href="#">GitHub</a>
+        </div>
       </div>
     </div>
   </section>
+
 
   <!-- SERVICES -->
   <section id="services">
@@ -72,12 +142,26 @@
   <!-- CONTACT -->
   <section id="contact">
     <h2>Let’s Work Together</h2>
+    <div class="contact-options">
+      
+    <div class="contact-form">  
     <form action="https://formspree.io/f/mzzykjon" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Tell me about your project..." required></textarea>
-      <button type="submit">Send Message</button>
+      <button type="submit" class="btn-primary">Send Message</button>
     </form>
+    </div>
+    <!-- Calendly option for fast clients -->
+    <div class="contact-calendly">
+      <p><strong>Need a reply within 1–2 hours?</strong></p>
+      <a href="https://calendly.com/your-calendly-username/15min" target="_blank" class="btn-secondary">
+        Book a Quick 15-min Call
+      </a>
+      <p style="font-size:0.9rem; margin-top:1rem; opacity:0.8;">
+        No obligation · Zero sales pressure
+      </p>
+    </div>  
   </section>
 
   <footer>
