@@ -63,15 +63,6 @@
   justify-content: center; 
   margin-top: 2rem;
 }
-.contact-form, .contact-calendly { flex: 1; min-width: 300px;; }
-.contact-calendly { 
-  text-align: center; 
-  padding: 2rem; 
-  background: rgba(255,255,255,0.05); 
-  border-radius: 12px; 
-  border: 1px solid rgba(255,255,255,0.1);
-}
-@media (max-width: 768px) { .contact-options { flex-direction: column; } }
   </style>
   
 </head>
@@ -100,9 +91,6 @@
     
     <div class="hero-buttons">
       <a href="#projects" class="btn btn-primary">View My Work</a>
-      <a href="https://calendly.com/your-calendly-username" target="_blank" class="btn btn-secondary">
-        Book a Quick Call (Reply in 2–3 hrs)
-      </a>
     </div>
   </div>
 </header>
@@ -155,19 +143,11 @@
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Tell me about your project..." required></textarea>
-      <button type="submit" class="btn-primary">Send Message</button>
+      <button type="submit" style="background:#6366f1; color:white; padding:1rem 2rem; border:none; border-radius:8px; font-size:1.1rem; cursor:pointer;">
+        Send Message
+      </button>
     </form>
     </div>
-    <!-- Calendly option for fast clients -->
-    <div class="contact-calendly">
-      <p><strong>Need a reply within 1–2 hours?</strong></p>
-      <a href="https://calendly.com/your-calendly-username/15min" target="_blank" class="btn-secondary">
-        Book a Quick 15-min Call
-      </a>
-      <p style="font-size:0.9rem; margin-top:1rem; opacity:0.8;">
-        No obligation · Zero sales pressure
-      </p>
-    </div>  
   </section>
 
   <footer>
