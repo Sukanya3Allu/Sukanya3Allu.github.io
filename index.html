@@ -171,6 +171,11 @@
   </footer>
 <script>
   const toggle = document.getElementById('themeToggle');
+  // Apply saved theme on page load
+  if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-mode');
+    toggle.textContent = '🌙';
+  }
   
   toggle.addEventListener('click', () => {
     document.body.classList.toggle('light-mode');
@@ -184,12 +189,6 @@
       localStorage.setItem('theme', 'dark');
     }
   });
-
-  // Load saved theme when page opens
-  if (localStorage.getItem('theme') === 'light') {
-    document.body.classList.add('light-mode');
-    toggle.textContent = '🌙';
-  }
 </script>
 </body>
 </html>
