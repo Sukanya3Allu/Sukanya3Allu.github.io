@@ -63,6 +63,19 @@
   justify-content: center; 
   margin-top: 2rem;
 }
+ /* ───── Dark / Light Mode Styles ───── */
+.light-mode {
+  background: #f8fafc;
+  color: #1e293b;
+}
+.light-mode .hero {
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.45)), url('Bg_hero.png') center/cover fixed !important;
+}
+.light-mode #projects { background: #ffffff !important; color: #1e293b; }
+.light-mode .card { background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+.light-mode footer { background: #1e293b; color: white; }
+.light-mode h1, .light-mode h2, .light-mode h3 { color: #1e293b; }
+    
   </style>
   
 </head>
@@ -71,6 +84,9 @@
 <header class="hero">
   <div class="hero-content">
     
+    <button id="themeToggle" style="position:fixed; top:20px; right:20px; background:rgba(255,255,255,0.15); backdrop-filter:blur(10px); border:none; width:50px; height:50px; border-radius:50%; font-size:24px; cursor:pointer; z-index:999; transition:0.4s;">
+      ☀︎
+    </button>
     <!-- Your photo will go here in 5 mins -->
     <img src="profile.png" alt="Sukanya Allu - AI/ML & IoT Engineer" class="profile-pic" id="profilePic">
     
@@ -153,6 +169,27 @@
   <footer>
     <p>© 2025 Sukanya Allu | <a href="https://github.com/Sukanya3Allu">GitHub</a> | <a href="#">LinkedIn</a></p>
   </footer>
+<script>
+  const toggle = document.getElementById('themeToggle');
+  
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    
+    // Change icon Sun ↔ Moon
+    if (document.body.classList.contains('light-mode')) {
+      toggle.textContent = '🌙';
+      localStorage.setItem('theme', 'light');
+    } else {
+      toggle.textContent = '☀︎';
+      localStorage.setItem('theme', 'dark');
+    }
+  });
 
+  // Load saved theme when page opens
+  if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-mode');
+    toggle.textContent = '🌙';
+  }
+</script>
 </body>
 </html>
