@@ -111,32 +111,120 @@
   </div>
 </header>
   
-  <!-- PROJECTS -->
- <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="grid">
-        <div class="card">
-          <img src="https://via.placeholder.com/600x400/4a90e2/ffffff?text=Chatbot" alt="Chatbot">
-          <h3>RAG Chatbot with Your Docs</h3>
-          <p>LangChain + OpenAI + Streamlit</p>
-          <a href="#">Live Demo</a> | <a href="#">GitHub</a>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/600x400/50c878/ffffff?text=Dashboard" alt="Dashboard">
-          <h3>Sales Forecast Dashboard</h3>
-          <p>Pandas + Prophet + Plotly Dash</p>
-          <a href="#">Live Demo</a> | <a href="#">GitHub</a>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/600x400/ff6b6b/ffffff?text=Web+App" alt="Web App">
-          <h3>E-commerce with AI Recommendations</h3>
-          <p>Next.js + Node + TensorFlow</p>
-          <a href="#">Live Demo</a> | <a href="#">GitHub</a>
+<!-- PROJECTS -->
+<section id="Projects" style="padding: 4rem 1rem; background: #0f172a; color: white;">
+  <div class="container" style="max-width: 1200px; margin: auto;">
+    <h2 style="text-align:center; font-size:2.8rem; margin-bottom:3rem; color:#6366f1;">
+      Projects
+    </h2>
+
+    <div class="grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(340px,1fr)); gap:2rem;">
+
+      <!-- PROJECT 1: VTOL Terrain-Following Mission Planner -->
+      <div class="card" style="background:#1e293b; border-radius:12px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.4); transition:0.3s;">
+        <img src="https://via.placeholder.com/600x300/6366f1/ffffff?text=VTOL+Terrain+Planner" alt="VTOL Mission Planner" style="width:100%; height:200px; object-fit:cover;">
+        <div style="padding:1.5rem;">
+          <h3 style="font-size:1.4rem; margin-bottom:0.5rem; color:#a78bfa;">
+            Autonomous VTOL Terrain-Following Mission Planner
+          </h3>
+          <p style="font-size:0.95rem; opacity:0.9; margin-bottom:1rem; color:#94a3b8;">
+            Python • Streamlit • GDAL • SRTM • KML • GeoPandas • pymavlink • Render.com
+          </p>
+          <button class="btn-toggle" onclick="this.parentElement.parentElement.querySelector('.details').classList.toggle('show')">
+            View Details ↓
+          </button>
+
+          <div class="details" style="margin-top:1rem; max-height:0; overflow:hidden; transition:max-height 0.6s ease;">
+            <ul style="font-size:0.95rem; padding-left:1.2rem; line-height:1.8; color:#e2e8f0;">
+              <li>Web app converts hand-drawn KML (Google Earth) → safe terrain-following .plan for PX4/ArduPilot VTOL</li>
+              <li>Auto adds +100m AGL clearance over peaks using SRTM + GDAL raster processing</li>
+              <li>Full mission structure: Loiter-to-Alt takeoff → Waypoints → Pre-RTL loiter → Safe RTL</li>
+              <li>Real-time gimbal pitch & camera trigger actions</li>
+              <li>Public deployed: <a href="#" style="color:#a78bfa;">try it live (coming soon)</a></li>
+            </ul>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:1rem; margin-top:1rem;">
+              <iframe width="100%" height="180" src="https://www.youtube.com/embed/YOUR_VIDEO_1" title="KML Drawing" frameborder="0" allowfullscreen style="border-radius:8px;"></iframe>
+              <iframe width="100%" height="180" src="https://www.youtube.com/embed/YOUR_VIDEO_2" title="Terrain Processing" frameborder="0" allowfullscreen style="border-radius:8px;"></iframe>
+              <iframe width="100%" height="180" src="https://www.youtube.com/embed/YOUR_VIDEO_3" title="QGroundControl Load" frameborder="0" allowfullscreen style="border-radius:8px;"></iframe>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- PROJECT 2: Real-Time Object Detection & Tracking -->
+      <div class="card" style="background:#1e293b; border-radius:12px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.4);">
+        <img src="https://via.placeholder.com/600x300/10b981/ffffff?text=YOLOv8+Drone+Tracking" alt="Drone Tracking">
+        <div style="padding:1.5rem;">
+          <h3 style="font-size:1.4rem; margin-bottom:0.5rem; color:#34d399;">
+            Real-Time Object Detection & Tracking for Drones
+          </h3>
+          <p style="font-size:0.95rem; opacity:0.9; margin-bottom:1rem; color:#94a3b8;">
+            YOLOv8 • OpenCV • ByteTrack • Raspberry Pi 4 • ArduPilot • MAVLink
+          </p>
+          <button class="btn-toggle" onclick="this.parentElement.parentElement.querySelector('.details').classList.toggle('show')">
+            View Details ↓
+          </button>
+
+          <div class="details" style="margin-top:1rem; max-height:0; overflow:hidden; transition:max-height 0.6s ease;">
+            <ul style="font-size:0.95rem; padding-left:1.2rem; line-height:1.8; color:#e2e8f0;">
+              <li>Fine-tuned YOLOv8 for multi-class detection on drone camera feed</li>
+              <li>ByteTrack for persistent multi-object tracking across frames</li>
+              <li>Outputs bounding boxes + yaw commands directly to autopilot via MAVLink</li>
+              <li>Fully autonomous boot-to-run on Raspberry Pi (no login needed)</li>
+              <li>Tested in real flight + SITL simulation</li>
+            </ul>
+            <div style="margin-top:1rem;">
+              <iframe width="100%" height="300" src="https://www.youtube.com/embed/YOUR_TRACKING_VIDEO" frameborder="0" allowfullscreen style="border-radius:8px;"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 3: Short-Range Weather Prediction -->
+      <div class="card" style="background:#1e293b; border-radius:12px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.4);">
+        <img src="https://via.placeholder.com/600x300/f59e0b/ffffff?text=Weather+Prediction+UAV" alt="Weather Prediction">
+        <div style="padding:1.5rem;">
+          <h3 style="font-size:1.4rem; margin-bottom:0.5rem; color:#fbbf24;">
+            4-Hour Weather Prediction for Safe UAV Operations
+          </h3>
+          <p style="font-size:0.95rem; opacity:0.9; margin-bottom:1rem; color:#94a3b8;">
+            ESP32 • Scikit-learn • LSTM • Wi-Fi • MAVLink • QGroundControl
+          </p>
+          <button class="btn-toggle" onclick="this.parentElement.parentElement.querySelector('.details').classList.toggle('show')">
+            View Details ↓
+          </button>
+
+          <div class="details" style="margin-top:1rem; max-height:0; overflow:hidden; transition:max-height 0.6s ease;">
+            <ul style="font-size:0.95rem; padding-left:1.2rem; line-height:1.8; color:#e2e8f0;">
+              <li>89% accurate 3–4 hour prediction of rain, wind, temp, humidity</li>
+              <li>On-device ML inference + live broadcast as MAVLink parameters</li>
+              <li>Visible directly in QGroundControl / Mission Planner</li>
+              <li>Fully autonomous sensor node (ESP32 + BME680 + anemometer)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
- </section>
+  </div>
+</section>
+
+<!-- Simple CSS for collapsible -->
+<style>
+  .btn-toggle {
+    background: transparent;
+    border: 2px solid #6366f1;
+    color: #a78bfa;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .btn-toggle:hover { background:#6366f1; color:white; }
+  .details.show { max-height: 1200px !important; padding-top:1rem; }
+</style>
 
 
   <!-- SERVICES -->
