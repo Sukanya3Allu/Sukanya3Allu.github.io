@@ -140,17 +140,25 @@
               <li>Auto adds +100m AGL clearance over peaks using SRTM + GDAL raster processing</li>
               <li>Full mission structure: Loiter-to-Alt takeoff → Waypoints → Pre-RTL loiter → Safe RTL</li>
               <li>Real-time gimbal pitch & camera trigger actions</li>
-              <li>Public deployed: <a href="#" style="color:#a78bfa;">try it live (coming soon)</a></li>
             </ul>
-
-            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:1rem; margin-top:1rem;">
-              <iframe width="100%" height="180" src="https://www.youtube.com/embed/YOUR_VIDEO_1" title="KML Drawing" frameborder="0" allowfullscreen style="border-radius:8px;"></iframe>
-              <iframe width="100%" height="180" src="https://www.youtube.com/embed/YOUR_VIDEO_2" title="Terrain Processing" frameborder="0" allowfullscreen style="border-radius:8px;"></iframe>
-              <iframe width="100%" height="180" src="https://www.youtube.com/embed/YOUR_VIDEO_3" title="QGroundControl Load" frameborder="0" allowfullscreen style="border-radius:8px;"></iframe>
+        <!-- Two Local Videos Side by Side -->
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1.5rem;">
+              <video controls style="width:100%; border-radius:8px; background:#000;">
+                <source src="Terrain_path.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <video controls loop muted style="width:100%; border-radius:8px; background:#000;">
+                <source src="Drone_fly.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
             </div>
+            <p style="text-align:center; font-size:0.85rem; margin-top:0.5rem; color:#94a3b8;">
+              Left: App Demo | Right: Real Flight Footage
+            </p>
           </div>
         </div>
       </div>
+
 
       <!-- PROJECT 2: Real-Time Object Detection & Tracking -->
       <div class="card" style="background:#1e293b; border-radius:12px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.4);">
@@ -174,13 +182,15 @@
               <li>Fully autonomous boot-to-run on Raspberry Pi (no login needed)</li>
               <li>Tested in real flight + SITL simulation</li>
             </ul>
-            <div style="margin-top:1rem;">
-              <iframe width="100%" height="300" src="https://www.youtube.com/embed/YOUR_TRACKING_VIDEO" frameborder="0" allowfullscreen style="border-radius:8px;"></iframe>
-            </div>
+          <!-- Single Local Video -->
+            <video controls style="width:100%; margin-top:1rem; border-radius:8px; background:#000;">
+              <source src="Detection.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </div>
-
+      
       <!-- PROJECT 3: Short-Range Weather Prediction -->
       <div class="card" style="background:#1e293b; border-radius:12px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.4);">
         <img src="https://via.placeholder.com/600x300/f59e0b/ffffff?text=Weather+Prediction+UAV" alt="Weather Prediction">
